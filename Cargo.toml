@@ -1,0 +1,41 @@
+[package]
+name = "gcad-webview"
+authors = ["fpgaminer <fpgaminer@bitcoin-mining.com>"]
+description = "Webview backend for gcad-extension"
+license = "MIT OR Apache-2.0"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+repository = "https://github.com/fpgaminer/gcad-webview"
+documentation = "https://docs.rs/gcad-webview"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+js-sys = "0.3.59"
+wasm-bindgen = "0.2.82"
+anyhow = { version = "1.0.62" }
+libgcad = { version = "0.2.2" }
+nalgebra = "0.31.1"
+
+
+[dependencies.web-sys]
+version = "0.3.4"
+features = [
+	'Document',
+	'Element',
+	'HtmlCanvasElement',
+	'WebGlBuffer',
+	'WebGlVertexArrayObject',
+	'WebGl2RenderingContext',
+	'WebGlUniformLocation',
+	'WebGlProgram',
+	'WebGlShader',
+	'Window',
+	'console',
+	'MouseEvent',
+	'EventTarget',
+	'WheelEvent',
+	'MessageEvent',
+]
